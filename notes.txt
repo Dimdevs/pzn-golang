@@ -1,0 +1,224 @@
+TUTORIAL EKO GOLANG 2020
+
+# Sejarah !
+Dibuat oleh google menggunakan Bahasa pemrograman C
+di rilis ke public open source 2009
+golang popular saat di gunakan membuat docker
+banyak teknologi yang di buat dengan golang seperti Kubernetes dan lain lain.
+popular di kalangan backend API microservice
+
+# Why learning Golang ?
+sederhana tidak utuh lama untuk belajar
+golang mendukung concurrency programming multicore processor
+golang mendukung garbage collector, yan tidak membutuhkan management memory
+Bahasa pemrograman yang sedang naik daun
+
+# SDK (SOFTWARE DEVELOPMENT KIT)
+compiler command	
+go version
+
+# proses development program Go - lang
+melakukan compile file
+yang di compile menjadi PBF Produce Binary File untuk menjadi native Binary tidak memerlukan compile di device lain karna native
+
+# TEXT EDITOR, IDE SUPPORT
+Visual Studio Code 
+JETBRAIN
+
+# Program Hello World Go - Lang
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("Hello World")
+}
+
+// printah compile go build (nama file).go
+
+
+# Tipe Data Number
+ada dua jenis tipe data Number, yaitu :
+1. Integer
+2. Floating Point
+
+- Tipe Data Integer (1)
+int8 min: -128 max: 128
+int16 min: -32768 max: 32768
+int32 min: -2147483638 max: 2147483638
+int64 min: -9,223,372,036,854,775,808 max: 9,223,372,036,854,775,807
+
+- Tipe Data Integer (2)
+unint8 min: 0 max: 255
+unint16 min: 0 max: 65535
+unint32 min: 0 max: 4294967295
+unint64 min: 0 max: 18446744073709551615
+
+- Tipe Data Floating Point
+
+float32 min: 1.18x10^38 max: 3.4x10^38
+float32 min: 2.23x10^308 max: 1.80x10^308
+complex64 -> complex numbers with float32 real and imaginary parts
+complex128 -> complex numbers with float64 real and imaginary parts
+
+- Alias
+byte -> unit8
+rune -> int32
+int -> min: 32 -> tergantung system operasi
+unit -> min: 32 -> tergantung system operasi
+
+# Kode Program Number
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("Satu = ", 1)
+	fmt.Println("Dua = ", 1)
+	fmt.Println("Tiga Koma Lima = ", 3.5)
+}
+
+
+# Tipe Data Boolean
+Tipe Data Boolean memiliki 2 nilai yaitu benar atau salah
+kata kunci pada golang membuat tipe data Boolean -> bool
+
+- Boolean
+true ket: Benar
+false ket: salah
+
+
+# Kode Program Boolean
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("Benar = ", true)
+	fmt.Println("Salah = ", false)
+}
+
+
+# Tipe Data String
+String Tipe data kumpulan karakter
+jumlah karakter di dalma string bisa no sampai tidak terhingga
+tipe data String -> string
+nilai data string -> di awali dengan "" (petik dua)
+
+- function untuk string
+function len("string") ket: menghitung jumlah karakter di string
+"string[number= index di mulai dari 0]" mengambil karakter pada posisi yang ditentukan
+
+
+# Variabel 
+variable adalah tempat untuk menyimpan data
+variable digunakan agar kita bisa mengakses data yang sama dimanapun kita mau
+di golang variabel hanya dapat menyimpan tipe data yang sama, jika ingin membedakan jenis kita harus membuat beberpa variabel tidak dapat di satukan dalam tipe data yang berbeda
+penamaan variabel tidak boleh sama harus berbeda atau uniq
+
+
+# kode program variabel
+package main
+
+import "fmt"
+
+func main() {
+	var name string
+
+	name = "Dimas Maulana"
+	fmt.Println(name)
+
+	name = "Dimas"
+	fmt.Println(name)
+}
+
+
+# Tipe Data Variabel
+saat membuat variabel wajib menyebutkan tipe data variabel tersebut, namun jika kita langsung menggunakannya data pada variabelnya, maka tidak wajib menyebutkan data variabelnya, otomatis di deteksi
+example :
+var name
+var name string
+
+# Kata Kunci Var
+tidak wajib menggunakan inisialisasi var
+asalahkan saat membuat variabel kita langsung menginiisalisasi datanya agar tidak perlu menggunakana kata kunci var. example :
+(namavariabel) := nilai
+
+# Deklarasi Multiple Variabel
+golang dapat membuat variabel secara sekaligus banyak code yang di buat akan lebih bagus dan mudah di baca
+
+
+# Constant
+variabel yang nilaninya tidak bisa diubah lagi
+kata kunci menggunakan const
+const wajib mendeklarasikan isi nilai variabel const ini
+
+# Kode Program Constant
+package main
+
+import "fmt"
+
+func main() {
+	const firstName string = "DIMAS"
+	const lastname = "DIMAS"
+	const value = 100
+	
+	fmt.Println(firstName)
+	fmt.Println(lastname)
+	fmt.Println(value)
+}
+
+
+# Deklarasi Multiple Constant 
+Sama Seperti variabel di golang juga kita bisa membuat constant secara sekaligus banyak
+
+
+#Type Declaration
+- berfungsi untuk membuat ulang tipe data baru dari tipe data yang sudah ada
+- biasanya di gunakan untuk membuat alias terhadap tipe data yang sudah ada dengan tujuan agar lebih muda di mengerti konsep seperti typescript yang ada pada next js.
+
+
+#Operasi Matematika
++ = Penjumlahan
+- = Pengurangan
+* = Perkalian
+/ = pembagian
+% = sisa pembagian
+
+#Augmanted Assignment
+mempersingkat untuk melakukan operasi matematika terhdapat variable
+a = a + 10
+a = a - 10
+a = a * 10
+a = a / 10
+a = a % 10
+
+a += 10
+a -= 10 
+a *= 10 
+a /= 10
+a %= 10 
+
+
+#unary operator
+++ -> a = a + 1;
+-- -> a = a - 1;
+- -> Negative;
++ -> Positive;
+! -> Boolean Kebalikan;
+
+#operasi perbandingan
+operasi perbandingan untuk membandingkan dua buat data
+operasi ini akan menghasilkan Boolean (benar or salah)
+jika hasil benar, maka nilanya adalah true
+jika hasil salah, maka nilanya adalah false
+
+> -> lebih dari
+< -> kurang dari
+>= lebih dari sama dengan
+<= lebih data sama dengan
+== sama dengan 
+!= tidak sama dengan
+
+
+
